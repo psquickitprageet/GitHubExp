@@ -1,0 +1,9 @@
+<configuration debug="true">
+   <appender name="loggly" class="ch.qos.logback.ext.loggly.LogglyAppender">
+       <endpointUrl>http://collector01.chipper01.loggly.net/inputs/89e8b8e9-439f-4be6-b5b2-269a9ebdfeaa/tag/java-logback-app</endpointUrl>
+       <pattern>%d{"ISO8601", UTC}  %p %t %c %M - %m%n</pattern>
+   </appender>
+   <root level="info">
+       <appender-ref ref="loggly" />
+   </root>
+</configuration>
